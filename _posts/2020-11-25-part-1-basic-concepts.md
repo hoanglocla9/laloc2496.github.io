@@ -23,11 +23,11 @@ Notes: In some documents, the authors denote $$t \in [0, +\infty)$$ to consider 
 
 **b. Arrival Time** \
 Now, after having the probability that a customer visits the store, the owner wants to know with a given time, how many times that an arrival event happens.\
-Denote $$S_{t}$$ is the number of customers that have arrived at the store at time t. $$T_{k}$$ is the time that there are k arrival events.\
+Denote $$S_{t}$$ is the number of customers that have arrived at the store at time t. $$T_{k}$$ is the time that there are $k$ arrival events.\
 >> $$S_{t} = \sum\limits_{i=0}^t X_{i}$$\
-We can see that $S_{t}$ is a random variable with a binomial distribution by its definition. Clearly, $$T_{k}$$ is a random variable, and the above question can be answered if we know the distribution of variable $$T_{k}$$. We assume that the $$k^{th}$$ arrival event occurs at time $$n^{th}$$. This assumption is equivalent to that there are exactly $$k-1$$ arrival events before time n and at time $$n$$, an arrival event happens. Mathematically, we formulate the above statement as:\
+We can see that $$S_{t}$$ is a random variable with a binomial distribution by its definition. Clearly, $$T_{k}$$ is a random variable, and the above question can be answered if we know the distribution of variable $$T_{k}$$. We assume that the $$k^{th}$$ arrival event occurs at time $$n^{th}$$. This assumption is equivalent to that there are exactly $$k-1$$ arrival events before time n and at time $$n$$, an arrival event happens. Mathematically, we formulate the above statement as:\
 >> $$\{T_{k} = n\} = \{X_n = 1, S_{n-1} = k-1\}$$\
-Because, $X_{i}$ is independent so that $$X_{n}$$ and $$S_{n-1}$$ are independent of each other. With $$n \geq k$$, we have: \
+Because, $$X_{i}$$ is independent so that $$X_{n}$$ and $$S_{n-1}$$ are independent of each other. With $$n \geq k$$, we have: \
 $$
 \begin{align}
 P(T_{k}=n) & = P(X_{n}=1)*P(S_{n-1}=k-1) \\
@@ -47,7 +47,7 @@ In this section, we will list some typical properties of Poisson process. Let ra
 **Independence increments:** This property states that when we compute the number of arrivals from time $$s$$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $$s$$ and $$t$$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $$s$$. Formally, we have:\
 $$
 \begin{align}
-N_{t} − N_{s} ⊥⊥ \{N_{r}\}_{(r \leq s)} \text{, for } t \geq s
+N_{t} − N_{s} \perp\perp \{N_{r}\}_{(r \leq s)} \text{, for } t \geq s
 \end{align}
 $$\
 **Stationary increments:** The second property a little bit seems like a time-shift invariant. In particular, it states that $$N_{t-s}$$ has the same distribution as $$N_{t} - N_{s}$$.\
