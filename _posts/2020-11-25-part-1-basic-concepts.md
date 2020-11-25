@@ -35,12 +35,12 @@ $T_{k} =$ the time that there are k arrival events.\
 Clearly, $T_{k}$ is a random variable, and the above question can be answered if we know the distribution of variable $T_{k}$. We assume that the $k^{th}$ arrival event occurs at time $n^{th}$. This assumption is equivalent to that there are exactly $k-1$ arrival events before time n and at time $n$, an arrival event happens. Mathematically, we formulate the above statement as:\
 $\\{T_{k} = n\\} = \\{X_n = 1, S_{n-1} = k-1\\}$\
 Because, $X_{i}$ is independent so that $X_{n}$ and $S_{n-1}$ are independent of each other. With $n \geq k$, we have: \
-<!-- $P(T_{k}=n)=P(X_{n}=1)*P(S_{n-1}=k-1)  = p * [C_{n-1}^{k-1} * p^{k-1} * (1-p)^{n-k}]=C_{n-1}^{k-1} * p^{k} * (1-p)^{n-k}$ \ -->
+$P(T_{k}=n)=P(X_{n}=1)*P(S_{n-1}=k-1) = p * [C_{n-1}^{k-1} * p^{k-1} * (1-p)^{n-k}]=C_{n-1}^{k-1} * p^{k} * (1-p)^{n-k}$ \
 Clearly, $T_{k}$ are random variables that follow a negative binomial distribution. \
 *A typical difference between binomial and negative binomial distribution that the number of trials is fixed in the binomial distribution, meanwhile in the negative one, the number of arrivals is fixed.* \
 Moreover, denoting $Z$ is the time that the first customer arrives at the store. With the similar analysis, we can derive that $Z$ is a random variable with Geometric distribution. In other words, $Z \sim Geometric(p)$. \
 In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $N_{t}$ is denoted for the continuous-time version of $S_{t}$. \
-Both ${N_{t}}_{a}$ and ${S_{t}}$ are arrival processes. Moreover, ${N_{t}}$ is a Poisson process. \
+Both $\\{N_{t}\\}$ and $\\{S_{t}\\}$ are arrival processes. Moreover, $\\{N_{t}\\}$ is a Poisson process. \
 In general, we have the arrival process's concept as follows: \
 An arrival process is a random process with an indexed set of Bernoulli random variables. \
 A Poisson process is a continous-time arrival process. Let λ is the intensity or arrival rate, $N_{t} \sim Pois(λt)$.
