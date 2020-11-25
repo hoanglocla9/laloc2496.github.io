@@ -34,14 +34,14 @@ We can see that $S_{t}$ is a random variable with a binomial distribution by its
 $$T_{k} =$$ the time that there are k arrival events.\
 Clearly, $$T_{k}$$ is a random variable, and the above question can be answered if we know the distribution of variable $$T_{k}$$. We assume that the $$k^{th}$$ arrival event occurs at time $$n^{th}$$. This assumption is equivalent to that there are exactly $$k-1$$ arrival events before time n and at time $$n$$, an arrival event happens. Mathematically, we formulate the above statement as:\
 $$\{T_{k} = n\} = \{X_n = 1, S_{n-1} = k-1\}$$\
-Because, $X_{i}$ is independent so that $$X_{n}$$ and $$S_{n-1}$$ are independent of each other. With $$n \geq k$$, we have:
+Because, $X_{i}$ is independent so that $$X_{n}$$ and $$S_{n-1}$$ are independent of each other. With $$n \geq k$$, we have: \
 $$
 \begin{align}
 P(T_{k}=n) & = P(X_{n}=1)*P(S_{n-1}=k-1) \\
  & = p * [C_{n-1}^{k-1} * p^{k-1} * (1-p)^{n-k}] \\
 & = C_{n-1}^{k-1} * p^{k} * (1-p)^{n-k}
 \end{align}
-$$
+$$ \
 Clearly, $$T_{k}$$ are random variables that follow a negative binomial distribution.\
 *A typical difference between binomial and negative binomial distribution that the number of trials is fixed in the binomial distribution, meanwhile in the negative one, the number of arrivals is fixed.*\
 Moreover, denoting $$Z$$ is the time that the first customer arrives at the store. With the similar analysis, we can derive that $$Z$$ is a random variable with Geometric distribution. In other words, $$Z \sim Geometric(p)$$.\
@@ -70,11 +70,11 @@ From the above properties, we can say a Poisson process is a strict-sense statio
 **d. Inter-arrival time:**
 
 A question arises that "How long do we have to wait until the next customer arrives ?" or more specific, "What is the distribution of $$T_{k} - T_{k-1}$$? Can we compute exactly its value ?"\
-Firstly, $T_{k} - T_{k-1}$ is a random variable, so that we can only compute its expected value. It is also called inter-arrival time. Moreover, the inter-arrival time of a Poisson process follows an exponential distribution. Formally, we have the following statements:\
-*Let $\{N_{t}\}_{(t≥0)}$ be an arrival process. The time of k_th arrival of this process is called an arrival time. In other words, it is $T_{k}$.\
-The time between two consecutive arrivals of ${N_{t}}_{t≥0}$ is called an inter-arrival time. Again, in other words, it is $T_{k} - T_{k-1}$, for $k \geq 1, T_{0} = 0.$*\
-The inter-arrival time variables are independent and identically distributed (i.i.d). Especially, if $N_{t} \sim Pois(λt), T_{k}-T_{k-1} \sim Exp(λ)$.\
-(In the general case, the random variable, which indicates the time between arbitrary $k_{1}$ and $k_{2}$, for $k_{2} - k_{1}\geq 1$, is distributed following a Gamma distribution. $T_{k_{2}} - T_{k_{1}} \sim Gamma(k_{2}-k_{1}, λ))$.
+Firstly, $$T_{k} - T_{k-1}$$ is a random variable, so that we can only compute its expected value. It is also called inter-arrival time. Moreover, the inter-arrival time of a Poisson process follows an exponential distribution. Formally, we have the following statements:\
+*Let $$\{N_{t}\}_{(t \geq 0)}$$ be an arrival process. The time of k_th arrival of this process is called an arrival time. In other words, it is $T_{k}$.\
+The time between two consecutive arrivals of $${N_{t}}_{t \geq 0}$$ is called an inter-arrival time. Again, in other words, it is $$T_{k} - T_{k-1}$$, for $$k \geq 1, T_{0} = 0.$$*\
+The inter-arrival time variables are independent and identically distributed (i.i.d). Especially, if $$N_{t} \sim Pois(λt), T_{k}-T_{k-1} \sim Exp(λ)$$.\
+(In the general case, the random variable, which indicates the time between arbitrary $$k_{1}$$ and $$k_{2}$$, for $$k_{2} - k_{1}\geq 1$$, is distributed following a Gamma distribution. $$T_{k_{2}} - T_{k_{1}} \sim Gamma(k_{2}-k_{1}, λ))$$.
 
 ## 3. Conclusions:
 In this part, I only recap some basic concepts and properties, which relate to Poisson process. In the next section, I will introduce and describe the ideas of H.Che's analysis.
