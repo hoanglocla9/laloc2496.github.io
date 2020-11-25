@@ -18,7 +18,6 @@ The model is built based on probability theory. So, firstly, I will recap some r
 A Bernoulli process is a sequence of independent trials, in which a trial is an event that a customer arrives at the store or not at the time t. Formally, A Bernoulli process is a sequence $$X_{1}, X_{2}, X_{3},...$$ of independent Bernoulli variables. More general, A random process is a collection of random variables usually indexed by time. The time can be discrete or continuous. \
 In formal, the random process is defined as follows: 
 Let $$S(t)$$ is a random variable. We collectively consider values of $$S(t)$$ at the time $$t \in (-\infty, +\infty)$$. $$\{S_{t}\}$$ is called a random process or a stochastic process. We can say that the random process $$\\{S_{t}\\}$$ is indexed by the set of time $$t \in J$$. ($$J$$ usually is a subset of the real line).
-
 *Note: In some documents, the authors denote $$t \in [0, +\infty)$$ to consider the process with $$t=0$$ is the current time.*
 
 **b. Arrival Time** \
@@ -26,8 +25,7 @@ Now, after having the probability that a customer visits the store, the owner wa
 Denote $$S_{t}$$ is the number of customers that have arrived at the store at time t. $$T_{k}$$ is the time that there are $k$ arrival events.\
 $$S_{t} = \sum\limits_{i=0}^t X_{i}$$\
 We can see that $$S_{t}$$ is a random variable with a binomial distribution by its definition. Clearly, $$T_{k}$$ is a random variable, and the above question can be answered if we know the distribution of variable $$T_{k}$$. We assume that the $$k^{th}$$ arrival event occurs at time $$n^{th}$$. This assumption is equivalent to that there are exactly $$k-1$$ arrival events before time n and at time $$n$$, an arrival event happens. Mathematically, we formulate the above statement as:\
-$$\{T_{k} = n\} = \{X_n = 1, S_{n-1} = k-1\}$$
-
+$$\{T_{k} = n\} = \{X_n = 1, S_{n-1} = k-1\}$$ \ 
 Because, $$X_{i}$$ is independent so that $$X_{n}$$ and $$S_{n-1}$$ are independent of each other. With $$n \geq k$$, we have: \
 $$
 \begin{align}
