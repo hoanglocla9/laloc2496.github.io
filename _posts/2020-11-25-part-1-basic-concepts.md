@@ -17,7 +17,7 @@ The model is built based on probability theory. So, firstly, I will recap some r
 **a. Random process:** \
 A Bernoulli process is a sequence of independent trials, in which a trial is an event that a customer arrives at the store or not at the time t. Formally, A Bernoulli process is a sequence $$X_{1}, X_{2}, X_{3},...$$ of independent Bernoulli variables. More general, A random process is a collection of random variables usually indexed by time. The time can be discrete or continuous. \
 In formal, the random process is defined as follows: 
-> Let $$S(t)$$ is a random variable. We collectively consider values of $$S(t)$$ at the time $$t \in (-\infty, +\infty)$$. $$\{S_{t}\}$$ is called a random process or a stochastic process. We can say that the random process $$\\{S_{t}\\}$$ is indexed by the set of time $$t \in J$$. ($$J$$ usually is a subset of the real line).
+Let $$S(t)$$ is a random variable. We collectively consider values of $$S(t)$$ at the time $$t \in (-\infty, +\infty)$$. $$\{S_{t}\}$$ is called a random process or a stochastic process. We can say that the random process $$\\{S_{t}\\}$$ is indexed by the set of time $$t \in J$$. ($$J$$ usually is a subset of the real line).
 
 *Note: In some documents, the authors denote $$t \in [0, +\infty)$$ to consider the process with $$t=0$$ is the current time.*
 
@@ -40,19 +40,19 @@ Clearly, $$T_{k}$$ are random variables that follow a negative binomial distribu
 > A typical difference between binomial and negative binomial distribution that the number of trials is fixed in the binomial distribution, meanwhile in the negative one, the number of arrivals is fixed.
 
 Moreover, denoting $$Z$$ is the time that the first customer arrives at the store. With the similar analysis, we can derive that $$Z$$ is a random variable with Geometric distribution. In other words, $$Z \sim Geometric(p)$$.\
-In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $$N_{t}$$ is denoted for the continuous-time version of $$S_{t}$$. Both $$\{N_{t}\}_{(t \geq 0)}$$ and $$\{S_{t}\}_{(t\geq0)}$$ are arrival processes. Moreover, $$\{N_{t}\}$$ is a Poisson process. In general, we have the arrival process's concept as follows:\
-* An arrival process is a random process with an indexed set of Bernoulli random variables. \
+In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $$N_{t}$$ is denoted for the continuous-time version of $$S_{t}$$. Both $$\{N_{t}\}_{(t \geq 0)}$$ and $$\{S_{t}\}_{(t\geq0)}$$ are arrival processes. Moreover, $$\{N_{t}\}$$ is a Poisson process. In general, we have the arrival process's concept as follows:
+* An arrival process is a random process with an indexed set of Bernoulli random variables.
 * A Poisson process is a continous-time arrival process. Let λ is the intensity or arrival rate, $$N_{t} \sim Pois(λt)$$.
 
 **c. Properties of Poisson process:** \
 In this section, we will list some typical properties of Poisson process. Let random process $$\{N_{t}\}_{(t\geq0)}$$ is a Poisson process, we have:\
-**Independence increments:** This property states that when we compute the number of arrivals from time $$s$$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $$s$$ and $$t$$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $$s$$. Formally, we have:\
+* **Independence increments:** This property states that when we compute the number of arrivals from time $$s$$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $$s$$ and $$t$$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $$s$$. Formally, we have:\
 $$
 \begin{align}
 N_{t} − N_{s} \perp\perp \{N_{r}\}_{(r \leq s)} \text{, for } t \geq s
 \end{align}
 $$\
-**Stationary increments:** The second property a little bit seems like a time-shift invariant. In particular, it states that $$N_{t-s}$$ has the same distribution as $$N_{t} - N_{s}$$.\
+* **Stationary increments:** The second property a little bit seems like a time-shift invariant. In particular, it states that $$N_{t-s}$$ has the same distribution as $$N_{t} - N_{s}$$.\
 $$
 \begin{align}
 N_{t} − N_{s} \sim Pois(λ(t − s)) \text{, for } t \geq s
@@ -63,9 +63,9 @@ From the above properties, we can say a Poisson process is a strict-sense statio
 **d. Inter-arrival time:** \
 A question arises that "How long do we have to wait until the next customer arrives ?" or more specific, "What is the distribution of $$T_{k} - T_{k-1}$$? Can we compute exactly its value ?"\
 Firstly, $$T_{k} - T_{k-1}$$ is a random variable, so that we can only compute its expected value. It is also called inter-arrival time. Moreover, the inter-arrival time of a Poisson process follows an exponential distribution. Formally, we have the following statements:\
-Let $$\{N_{t}\}_{(t \geq 0)}$$ be an arrival process. The time of k_th arrival of this process is called an arrival time. In other words, it is $$T_{k}$$.\
-The time between two consecutive arrivals of $${N_{t}}_{t \geq 0}$$ is called an inter-arrival time. Again, in other words, it is $$T_{k} - T_{k-1}$$, for $$k \geq 1, T_{0} = 0.$$\
-The inter-arrival time variables are independent and identically distributed (i.i.d). Especially, if $$N_{t} \sim Pois(λt), T_{k}-T_{k-1} \sim Exp(λ)$$.\
+* Let $$\{N_{t}\}_{(t \geq 0)}$$ be an arrival process. The time of $$k^{th}$$ arrival of this process is called an arrival time. In other words, it is $$T_{k}$$.\
+* The time between two consecutive arrivals of $${N_{t}}_{t \geq 0}$$ is called an inter-arrival time. Again, in other words, it is $$T_{k} - T_{k-1}$$, for $$k \geq 1, T_{0} = 0.$$\
+* The inter-arrival time variables are independent and identically distributed (i.i.d). Especially, if $$N_{t} \sim Pois(λt)$$, $$T_{k}-T_{k-1} \sim Exp(λ)$$.\
 In the general case, the random variable, which indicates the time between arbitrary $$k_{1}$$ and $$k_{2}$$, for $$k_{2} - k_{1}\geq 1$$, is distributed following a Gamma distribution. $$T_{k_{2}} - T_{k_{1}} \sim Gamma(k_{2}-k_{1}, λ)$$.
 
 ## 3. Conclusions:
