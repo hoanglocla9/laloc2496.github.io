@@ -48,13 +48,9 @@ A Poisson process is a continous-time arrival process. Let λ is the intensity o
 
 In this section, we will list some typical properties of Poisson process. Let random process $\\{N_{t}\\}_{(t\geq0)}$ is a Poisson process, we have:\
 Independence increments: This property states that when we compute the number of arrivals from time $s$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $s and $t$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $s$. Formally, we have:\
-$$
-N_{t} − N_{s} ⊥⊥ \\{N_{r}\\}_{(r \leq s)} \text{, for } t \geq s
-$$\
-Stationary increments: The second property a little bit seems like a time-shift invariant. In particular, it states that N_{t-s} has the same distribution as N_{t} - N_{s}.
-$$
-N_{t} − N_{s} \sim Pois(λ(t − s)) \text{, for } t \geq s
-$$
+$N_{t} − N_{s} ⊥⊥ \\{N_{r}\\}_{\\(r \leq s\\)}$, for $t \geq s$\
+Stationary increments: The second property a little bit seems like a time-shift invariant. In particular, it states that N_{t-s} has the same distribution as N_{t} - N_{s}. \
+$N_{t} − N_{s} \sim Pois(λ(t − s))$, for $t \geq s$ \
 From the above properties, we can say a Poisson process is a strict-sense stationary random process.
 
 **d. Inter-arrival time:**
