@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Part 1 - Basic concepts
+title: Cache Modeling ~ Part 1 - Basic concepts
 tags: [modeling, queue system, random process]
 comments: true
 ---
