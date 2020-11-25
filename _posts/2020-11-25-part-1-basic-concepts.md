@@ -33,7 +33,7 @@ $S_{t} = \sum\limits_{i=0}^t X_{i}$\
 We can see that $S_{t}$ is a random variable with a binomial distribution by its definition.\
 $T_{k} =$ the time that there are k arrival events.\
 Clearly, $T_{k}$ is a random variable, and the above question can be answered if we know the distribution of variable $T_{k}$. We assume that the $k^{th}$ arrival event occurs at time $n^{th}$. This assumption is equivalent to that there are exactly $k-1$ arrival events before time n and at time $n$, an arrival event happens. Mathematically, we formulate the above statement as:\
-$\{T_{k} = n\} = \{X_n = 1, S_{n-1} = k-1\}$\
+$\\{T_{k} = n\\} = \\{X_n = 1, S_{n-1} = k-1\\}$\
 Because, $X_{i}$ is independent so that $X_{n}$ and $S_{n-1}$ are independent of each other. With $n \geq k$, we have:
 $$
 P(T_{k}=n) & = P(X_{n}=1)*P(S_{n-1}=k-1) \\
