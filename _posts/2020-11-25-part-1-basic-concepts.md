@@ -22,7 +22,7 @@ A Bernoulli process is a sequence of independent trials, in which a trial is an 
 
 In formal, the random process is defined as follows:
 Let $S(t)$ is a random variable. We collectively consider values of $S(t)$ at the time $t \in (-\infty, +\infty)$. $\{S_{t}\}$ is called a random process or a stochastic process.
-We can say that the random process $\{S_{t}\}$ is indexed by the set of time $t \in J$. ($J$ usually is a subset of the real line).
+We can say that the random process $\\{S_{t}\\}$ is indexed by the set of time $t \in J$. ($J$ usually is a subset of the real line).
 Notes: In some documents, the authors denote $t \in [0, +\infty)$ to consider the process with $t=0$ is the current time.
 
 **b. Arrival Time**
@@ -36,16 +36,14 @@ Clearly, $T_{k}$ is a random variable, and the above question can be answered if
 $\{T_{k} = n\} = \{X_n = 1, S_{n-1} = k-1\}$\
 Because, $X_{i}$ is independent so that $X_{n}$ and $S_{n-1}$ are independent of each other. With $n \geq k$, we have:
 $$
-\begin{aligned}
 P(T_{k}=n) & = P(X_{n}=1)*P(S_{n-1}=k-1) \\
  & = p * [C_{n-1}^{k-1} * p^{k-1} * (1-p)^{n-k}] \\
 & = C_{n-1}^{k-1} * p^{k} * (1-p)^{n-k}
-\end{aligned}
 $$
 Clearly, $T_{k}$ are random variables that follow a negative binomial distribution.\
 *A typical difference between binomial and negative binomial distribution that the number of trials is fixed in the binomial distribution, meanwhile in the negative one, the number of arrivals is fixed.*\
 Moreover, denoting $Z$ is the time that the first customer arrives at the store. With the similar analysis, we can derive that $Z$ is a random variable with Geometric distribution. In other words, $Z \sim Geometric(p)$.\
-In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $N_{t}$ is denoted for the continuous-time version of $S_{t}$. Both $\{N_{t}\}_{(t\geq0)}$ and $\{S_{t}\}_{(t\geq0)}$ are arrival processes. Moreover, $\{N_{t}\}$ is a Poisson process .\
+In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $N_{t}$ is denoted for the continuous-time version of $S_{t}$. Both $\{N_{t}\}_{(t \geq 0)}$ and $\{S_{t}\}_{(t\geq0)}$ are arrival processes. Moreover, $\{N_{t}\}$ is a Poisson process .\
 In general, we have the arrival process's concept as follows:\
 An arrival process is a random process with an indexed set of Bernoulli random variables. \
 A Poisson process is a continous-time arrival process. Let λ is the intensity or arrival rate, $N_{t} \sim Pois(λt)$.
@@ -53,17 +51,13 @@ A Poisson process is a continous-time arrival process. Let λ is the intensity o
 **c. Properties of Poisson process:**
 
 In this section, we will list some typical properties of Poisson process. Let random process $\{N_{t}\}_{(t\geq0)}$ is a Poisson process, we have:\
-Independence increments: This property states that when we compute the number of arrivals from time $s$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $s and $t$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $s$. Formally, we have:
+Independence increments: This property states that when we compute the number of arrivals from time $s$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $s and $t$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $s$. Formally, we have:\
 $$
-\begin{aligned}
 N_{t} − N_{s} ⊥⊥ \{N_{r}\}_{(r \leq s)} \text{, for } t \geq s
-\end{aligned}
-$$
+$$\
 Stationary increments: The second property a little bit seems like a time-shift invariant. In particular, it states that N_{t-s} has the same distribution as N_{t} - N_{s}.
 $$
-\begin{aligned}
 N_{t} − N_{s} \sim Pois(λ(t − s)) \text{, for } t \geq s
-\end{aligned}
 $$
 From the above properties, we can say a Poisson process is a strict-sense stationary random process.
 
