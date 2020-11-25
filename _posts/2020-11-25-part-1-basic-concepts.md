@@ -7,17 +7,14 @@ comments: true
 
 
 ## 1. Introduction
-
 The caching mechanism occurs in many computer sciences' fields, from low-level memories of physical machines to global-scale content delivery networks. Modeling caching systems helps us get insights into the systems' behaviors, and from these knowledges, we can tune and improve the performance.\
 Mathematical models of caching systems have been considered since the early of 2000s. One of the most famous models is proposed by H.Che in [1]. In particular, H.Che assumed that arrival requests natively follow a stationary Poisson process. In specific, he assumes that the arrival event of specific content at a leaf cache will have the same Bernoulli distribution at any time, which is unrealistic, especially in the case of live-streaming service and the dynamic of contents through time. Originally, his model is designed for the LRU eviction algorithm and extended for several other eviction algorithms by V. Martina in [2]. Relaxed-constraints versions of this model are proposed in several works as [3], [4]. In this series's scope, I will only describe the ideas of H.Che's model.\
 *Note: In this article, I assume that you have basic knowledge of probability theory. The next section only recaps some random process concepts, which are used to develop the model's ideas.*
 
 ## 2. Some basic concepts of probability and random process
-
 The model is built based on probability theory. So, firstly, I will recap some related probability definitions. To simplify the probability concepts without rigorous mathematical statements, we will consider the following example. To evaluate the current business situation of a bakery. The store's owner observes customers who arrive at his/her store. The time is discretized into equal intervals, such as hour, minute, or second. We denote the probability that a customer arrives at the store is p and the arrival event at time t is $$X_{t} \in {0, 1}$$. Assuming that an arrival occurs independently and with equal probability p at every time. Clearly, $$X \sim Bernoulli(p)$$. We say that an arrival event happens when $$X_{t} = 1$$.
 
-**a. Random process:**
-
+**a. Random process:** \
 A Bernoulli process is a sequence of independent trials, in which a trial is an event that a customer arrives at the store or not at the time t. Formally, A Bernoulli process is a sequence $$X_{1}, X_{2}, X_{3},...$$ of independent Bernoulli variables. More general, A random process is a collection of random variables usually indexed by time. The time can be discrete or continuous.
 
 In formal, the random process is defined as follows:
@@ -25,8 +22,7 @@ Let $$S(t)$$ is a random variable. We collectively consider values of $$S(t)$$ a
 We can say that the random process $$\\{S_{t}\\}$$ is indexed by the set of time $$t \in J$$. ($$J$$ usually is a subset of the real line).
 Notes: In some documents, the authors denote $$t \in [0, +\infty)$$ to consider the process with $$t=0$$ is the current time.
 
-**b. Arrival Time**
-
+**b. Arrival Time** \
 Now, after having the probability that a customer visits the store, the owner wants to know with a given time, how many times that an arrival event happens.\
 Denote $$S_{t}$$ is the number of customers that have arrived at the store at time t.\
 $$S_{t} = \sum\limits_{i=0}^t X_{i}$$\
@@ -49,8 +45,7 @@ In the above analysis, we assume that time is discrete. In the case of continuou
 An arrival process is a random process with an indexed set of Bernoulli random variables. \
 A Poisson process is a continous-time arrival process. Let λ is the intensity or arrival rate, $$N_{t} \sim Pois(λt)$$.
 
-**c. Properties of Poisson process:**
-
+**c. Properties of Poisson process:** \
 In this section, we will list some typical properties of Poisson process. Let random process $$\{N_{t}\}_{(t\geq0)}$$ is a Poisson process, we have:\
 Independence increments: This property states that when we compute the number of arrivals from time $$s$$, we don't need to care about the number of arrivals that happen before that. In other words, the number of arrivals between time $$s$$ and $$t$$ only depends on the trials in this time interval and is therefore independent of the arrivals before time $$s$$. Formally, we have:\
 $$
@@ -58,16 +53,15 @@ $$
 N_{t} − N_{s} ⊥⊥ \{N_{r}\}_{(r \leq s)} \text{, for } t \geq s
 \end{align}
 $$\
-Stationary increments: The second property a little bit seems like a time-shift invariant. In particular, it states that $$N_{t-s}$$ has the same distribution as $$N_{t} - N_{s}$$.
+Stationary increments: The second property a little bit seems like a time-shift invariant. In particular, it states that $$N_{t-s}$$ has the same distribution as $$N_{t} - N_{s}$$.\
 $$
 \begin{align}
 N_{t} − N_{s} \sim Pois(λ(t − s)) \text{, for } t \geq s
 \end{align}
-$$
+$$ \
 From the above properties, we can say a Poisson process is a strict-sense stationary random process.
 
-**d. Inter-arrival time:**
-
+**d. Inter-arrival time:** \
 A question arises that "How long do we have to wait until the next customer arrives ?" or more specific, "What is the distribution of $$T_{k} - T_{k-1}$$? Can we compute exactly its value ?"\
 Firstly, $$T_{k} - T_{k-1}$$ is a random variable, so that we can only compute its expected value. It is also called inter-arrival time. Moreover, the inter-arrival time of a Poisson process follows an exponential distribution. Formally, we have the following statements:\
 *Let $$\{N_{t}\}_{(t \geq 0)}$$ be an arrival process. The time of k_th arrival of this process is called an arrival time. In other words, it is $$T_{k}$$.\
