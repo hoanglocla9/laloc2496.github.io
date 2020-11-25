@@ -39,7 +39,7 @@ Because, $X_{i}$ is independent so that $X_{n}$ and $S_{n-1}$ are independent of
 Clearly, $T_{k}$ are random variables that follow a negative binomial distribution. \
 *A typical difference between binomial and negative binomial distribution that the number of trials is fixed in the binomial distribution, meanwhile in the negative one, the number of arrivals is fixed.* \
 Moreover, denoting $Z$ is the time that the first customer arrives at the store. With the similar analysis, we can derive that $Z$ is a random variable with Geometric distribution. In other words, $Z \sim Geometric(p)$. \
-In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $N_{t}$ is denoted for the continuous-time version of $S_{t}$. Both ${N_{t}}_{(t \geq 0)}$ and ${S_{t}}_{(t \geq 0)}$ are arrival processes. Moreover, ${N_{t}}$ is a Poisson process. \
+In the above analysis, we assume that time is discrete. In the case of continuous-time, the above analysis is still true. $N_{t}$ is denoted for the continuous-time version of $S_{t}$. Both ${N_{t}}_{(t > 0)}$ and ${S_{t}}_{(t > 0)}$ are arrival processes. Moreover, ${N_{t}}$ is a Poisson process. \
 In general, we have the arrival process's concept as follows: \
 An arrival process is a random process with an indexed set of Bernoulli random variables. \
 A Poisson process is a continous-time arrival process. Let λ is the intensity or arrival rate, $N_{t} \sim Pois(λt)$.
