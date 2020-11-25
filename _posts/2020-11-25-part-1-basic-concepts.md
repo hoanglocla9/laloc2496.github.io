@@ -6,10 +6,11 @@ comments: true
 ---
 
 
-The caching mechanism occurs in many computer sciences' fields, from low-level memories of physical machines to global-scale content delivery networks. Modeling caching systems helps us get insights into the systems' behaviors, and from these knowledges, we can tune and improve the performance.\
+The caching mechanism occurs in many computer sciences' fields, from low-level memories of physical machines to global-scale content delivery networks. Modeling caching systems helps us get insights into the systems' behaviors, and from these knowledges, we can tune and improve the performance.
 
 ## 1. Related Works
-Mathematical models of caching systems have been considered since the early of 2000s. One of the most famous models is proposed by H.Che in [1]. In particular, H.Che assumed that arrival requests natively follow a stationary Poisson process. In specific, he assumes that the arrival event of specific content at a leaf cache will have the same Bernoulli distribution at any time, which is unrealistic, especially in the case of live-streaming service and the dynamic of contents through time. Originally, his model is designed for the LRU eviction algorithm and extended for several other eviction algorithms by V. Martina in [2]. Relaxed-constraints versions of this model are proposed in several works as [3], [4]. In this series's scope, I will only describe the ideas of H.Che's model.\
+Mathematical models of caching systems have been considered since the early of 2000s. One of the most famous models is proposed by H.Che in [1]. In particular, H.Che assumed that arrival requests natively follow a stationary Poisson process. In specific, he assumes that the arrival event of specific content at a leaf cache will have the same Bernoulli distribution at any time, which is unrealistic, especially in the case of live-streaming service and the dynamic of contents through time. \
+Originally, his model is designed for the LRU eviction algorithm and extended for several other eviction algorithms by V. Martina in [2]. Relaxed-constraints versions of this model are proposed in several works as [3], [4]. In this series's scope, I will only describe the ideas of H.Che's model.\
 *Note: I assume that you have basic knowledge of probability theory. For the sake of brevity, the next section only recaps some random process concepts, which are useful to develop the model's ideas.*
 
 ## 2. Some concepts of random process
