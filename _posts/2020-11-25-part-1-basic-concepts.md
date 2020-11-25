@@ -17,7 +17,7 @@ The model is built based on probability theory. So, firstly, I will recap some r
 **a. Random process:** \
 A Bernoulli process is a sequence of independent trials, in which a trial is an event that a customer arrives at the store or not at the time t. Formally, A Bernoulli process is a sequence $$X_{1}, X_{2}, X_{3},...$$ of independent Bernoulli variables. More general, A random process is a collection of random variables usually indexed by time. The time can be discrete or continuous. \
 In formal, the random process is defined as follows: 
-Let $$S(t)$$ is a random variable. We collectively consider values of $$S(t)$$ at the time $$t \in (-\infty, +\infty)$$. $$\{S_{t}\}$$ is called a random process or a stochastic process. We can say that the random process $$\\{S_{t}\\}$$ is indexed by the set of time $$t \in J$$. ($$J$$ usually is a subset of the real line).
+Let $$S(t)$$ is a random variable. We collectively consider values of $$S(t)$$ at the time $$t \in (-\infty, +\infty)$$. $$\{S_{t}\}$$ is called a random process or a stochastic process. We can say that the random process $$\\{S_{t}\\}$$ is indexed by the set of time $$t \in J$$. ($$J$$ usually is a subset of the real line). \
 *Note: In some documents, the authors denote $$t \in [0, +\infty)$$ to consider the process with $$t=0$$ is the current time.*
 
 **b. Arrival Time** \
