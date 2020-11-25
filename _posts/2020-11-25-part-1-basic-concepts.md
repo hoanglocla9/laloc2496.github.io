@@ -55,7 +55,8 @@ $$
 \begin{align}
 N_{t} − N_{s} \sim Pois(λ(t − s)) \text{, for } t \geq s
 \end{align}
-$$ \
+$$ 
+
 From the above properties, we can say a Poisson process is a strict-sense stationary random process.
 
 **d. Inter-arrival time:** \
@@ -63,7 +64,8 @@ A question arises that "How long do we have to wait until the next customer arri
 Firstly, $$T_{k} - T_{k-1}$$ is a random variable, so that we can only compute its expected value. It is also called inter-arrival time. Moreover, the inter-arrival time of a Poisson process follows an exponential distribution. Formally, we have the following statements:
 * Let $$\{N_{t}\}_{(t \geq 0)}$$ be an arrival process. The time of $$k^{th}$$ arrival of this process is called an arrival time. In other words, it is $$T_{k}$$.
 * The time between two consecutive arrivals of $${N_{t}}_{t \geq 0}$$ is called an inter-arrival time. Again, in other words, it is $$T_{k} - T_{k-1}$$, for $$k \geq 1, T_{0} = 0.$$
-* The inter-arrival time variables are independent and identically distributed (i.i.d). Especially, if $$N_{t} \sim Pois(λt)$$, $$T_{k}-T_{k-1} \sim Exp(λ)$$.
+* The inter-arrival time variables are independent and identically distributed (i.i.d). Especially, if $$N_{t} \sim Pois(λt)$$, $$T_{k}-T_{k-1} \sim Exp(λ)$$. 
+
 In the general case, the random variable, which indicates the time between arbitrary $$k_{1}$$ and $$k_{2}$$, for $$k_{2} - k_{1}\geq 1$$, is distributed following a Gamma distribution. $$T_{k_{2}} - T_{k_{1}} \sim Gamma(k_{2}-k_{1}, λ)$$.
 
 ## 3. Conclusions:
