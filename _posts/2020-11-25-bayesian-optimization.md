@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyperparameter Tuning Algorithms ~ Part 1: Bayesian Optimization
+title: "Hyperparameter Tuning Algorithms: Part 1 - Bayesian Optimization"
 tags: [optimization, hyperparameter tuning, bayesian]
 comments: true
 ---
